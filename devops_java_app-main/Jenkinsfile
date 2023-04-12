@@ -1,14 +1,16 @@
-@Library('shared -lib') _
-
-pipeline{
+pipeline {
     agent any
     stages{
         stage('git checkout'){
             steps{
-            gitCheckout{
-                branch: "main",
-                url: "https://github.com/Harishbabumeesala/project1.git"
+                script{
+                    git branch: 'main', url: 'https://github.com/Harishbabumeesala/project1.git'
+                }
             }
+        }
+        stage("unit testing"){
+            steps{
+                sh 'mvn test'
             }
         }
     }
