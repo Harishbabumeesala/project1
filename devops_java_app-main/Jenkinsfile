@@ -1,11 +1,14 @@
+@Library('shared -lib')
+
 pipeline {
     agent any
     stages{
         stage('git checkout'){
             steps{
-                script{
-                    git branch: 'main', url: 'https://github.com/Harishbabumeesala/project1.git'
-                }
+            gitCheckout{
+                branch:"main",
+                url:"https://github.com/Harishbabumeesala/project1.git"
+            }
             }
         }
     }
