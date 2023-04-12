@@ -1,0 +1,12 @@
+pipeline {
+    agent any
+    stages {
+        stage ('git checkout'){
+            step {
+                script {
+                    git branch: 'main', url: 'https://github.com/Harishbabumeesala/project1.git'
+                }
+            }
+        }
+    }
+}
