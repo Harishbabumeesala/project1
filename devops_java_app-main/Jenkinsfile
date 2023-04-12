@@ -6,8 +6,8 @@ pipeline{
         stage('git checkout'){
             steps{
             gitCheckout{
-                branch:"main",
-                url:"https://github.com/Harishbabumeesala/project1.git"
+                branch : "main",
+                url : "https://github.com/Harishbabumeesala/project1.git"
             }
             }
         }
