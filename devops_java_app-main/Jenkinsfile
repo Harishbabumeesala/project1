@@ -2,7 +2,7 @@ pipeline {
     agent any
     stages{
         stage('git checkout'){
-            step{
+            steps{
                 script{
                     git branch: 'main', url: 'https://github.com/Harishbabumeesala/project1.git'
                 }
